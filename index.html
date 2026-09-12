@@ -29,6 +29,22 @@
             }
         }
     </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+    </style>
 </head>
 <body class="bg-[#FDFBF7] text-[#2E2A39] font-sans antialiased selection:bg-[#E8B4D4] selection:text-[#2E2A39]">
 
@@ -39,10 +55,10 @@
 
     <!-- Main Hero Section -->
     <div class="min-h-[85vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 text-center">
-        <div class="max-w-3xl mx-auto space-y-6">
+        <div class="max-w-3xl mx-auto space-y-6 animate-fade-in">
             
-            <!-- Logo Badge -->
-            <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-tr from-[#9B046F] to-[#2E2A39] text-white font-bold text-3xl shadow-xl mb-2 animate-bounce">
+            <!-- Logo Badge with Float Animation -->
+            <div class="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-tr from-[#9B046F] to-[#2E2A39] text-white font-bold text-4xl shadow-2xl mb-2 animate-float">
                 B
             </div>
 
@@ -54,9 +70,15 @@
                 Beauty Beyond Borders • Bangladesh
             </p>
 
-            <!-- Description -->
-            <p class="text-sm sm:text-base text-stone-600 max-w-xl mx-auto leading-relaxed pt-2">
-                Your premier destination for authentic international skincare, viral K-Beauty holy grails, and luxury fragrances imported directly for you. Full store launch coming soon!
+            <!-- Opening Soon Badge (English & Bangla) -->
+            <div class="inline-block py-2 px-6 rounded-full bg-[#9B046F]/10 border border-[#9B046F]/30 text-[#9B046F] text-xs sm:text-sm font-bold tracking-wide">
+                🚀 Opening Very Soon | খুব শীঘ্রই আসছে আমাদের নতুন ই-কমার্স প্ল্যাটফর্ম!
+            </div>
+
+            <!-- Description (English & Bangla) -->
+            <p class="text-sm sm:text-base text-stone-600 max-w-xl mx-auto leading-relaxed pt-1">
+                Your premier destination for authentic international skincare, viral K-Beauty holy grails, and luxury fragrances imported directly for you. <br>
+                <span class="text-xs text-stone-500 mt-1 block">আপনার ত্বকের যত্নে ১০০% অথেনটিক এবং অরিজিনাল স্কিনকেয়ার পণ্য নিয়ে আমরা আসছি খুব দ্রুত।</span>
             </p>
 
             <!-- Action Buttons -->
@@ -71,15 +93,15 @@
 
             <!-- Trust Pills -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-10 border-t border-stone-200 mt-10">
-                <div class="p-4 bg-white rounded-2xl border border-stone-200 shadow-xs">
+                <div class="p-4 bg-white rounded-2xl border border-stone-200 shadow-xs hover:border-[#9B046F] transition-colors">
                     <p class="font-bold text-xs text-[#9B046F]">100% Original</p>
                     <p class="text-[11px] text-stone-500 mt-0.5">Sourced from authorized suppliers</p>
                 </div>
-                <div class="p-4 bg-white rounded-2xl border border-stone-200 shadow-xs">
+                <div class="p-4 bg-white rounded-2xl border border-stone-200 shadow-xs hover:border-[#9B046F] transition-colors">
                     <p class="font-bold text-xs text-[#9B046F]">Fast Delivery</p>
                     <p class="text-[11px] text-stone-500 mt-0.5">Inside Dhaka & Nationwide</p>
                 </div>
-                <div class="p-4 bg-white rounded-2xl border border-stone-200 shadow-xs">
+                <div class="p-4 bg-white rounded-2xl border border-stone-200 shadow-xs hover:border-[#9B046F] transition-colors">
                     <p class="font-bold text-xs text-[#9B046F]">Secure MFS</p>
                     <p class="text-[11px] text-stone-500 mt-0.5">bKash, Nagad & COD available</p>
                 </div>
